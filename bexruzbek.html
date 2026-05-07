@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>IELTS Speaking Band 8 | Bexruzbek</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: linear-gradient(145deg, #0b1120 0%, #19233c 100%);
+            font-family: 'Segoe UI', 'Poppins', 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Roboto', sans-serif;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 2rem 1.5rem;
+        }
+
+        /* main card container */
+        .glass-card {
+            max-width: 950px;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.07);
+            backdrop-filter: blur(12px);
+            border-radius: 3rem;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 25px 45px rgba(0, 0, 0, 0.4), 0 0 0 1px rgba(255, 255, 255, 0.05) inset;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        /* animated header section */
+        .moving-header {
+            background: linear-gradient(135deg, #1e2a3a, #0f1722);
+            padding: 2.2rem 1rem 1.8rem;
+            text-align: center;
+            border-bottom: 2px solid #f7c948;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* decorative glow orbs */
+        .moving-header::before {
+            content: '';
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            background: radial-gradient(circle, rgba(247, 201, 72, 0.2), transparent 70%);
+            top: -80px;
+            left: -80px;
+            border-radius: 50%;
+            pointer-events: none;
+        }
+
+        .moving-header::after {
+            content: '';
+            position: absolute;
+            width: 250px;
+            height: 250px;
+            background: radial-gradient(circle, rgba(100, 200, 255, 0.15), transparent 70%);
+            bottom: -100px;
+            right: -80px;
+            border-radius: 50%;
+            pointer-events: none;
+        }
+
+        /* moving text area */
+        .moving-text-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+            margin-bottom: 0.5rem;
+        }
+
+        .moving-word {
+            font-size: 4rem;
+            font-weight: 800;
+            letter-spacing: 4px;
+            background: linear-gradient(125deg, #FFD166, #FFB347, #FF8C42);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+            text-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            display: inline-block;
+            animation: floatMove 3.5s ease-in-out infinite;
+            white-space: nowrap;
+        }
+
+        /* additional moving effect with smooth slide + bounce */
+        @keyframes floatMove {
+            0% {
+                transform: translateX(0px) translateY(0px);
+                letter-spacing: 4px;
+                text-shadow: 0 0 3px #ffb347;
+            }
+            25% {
+                transform: translateX(12px) translateY(-6px);
+                letter-spacing: 8px;
+                text-shadow: 0 0 12px #ffd966;
+            }
+            50% {
+                transform: translateX(-8px) translateY(4px);
+                letter-spacing: 5px;
+                text-shadow: 0 0 8px #ffaa33;
+            }
+            75% {
+                transform: translateX(7px) translateY(-3px);
+                letter-spacing: 7px;
+            }
+            100% {
+                transform: translateX(0px) translateY(0px);
+                letter-spacing: 4px;
+            }
+        }
+
+        /* optional sparkle effect */
+        .spark {
+            font-size: 3rem;
+            display: inline-block;
+            animation: twinkle 1.8s infinite alternate;
+        }
+
+        @keyframes twinkle {
+            0% { opacity: 0.3; transform: scale(0.9);}
+            100% { opacity: 1; transform: scale(1.1);}
+        }
+
+        .sub-move {
+            margin-top: 0.5rem;
+            font-size: 1.3rem;
+            color: #e2e8f0;
+            font-weight: 500;
+            background: rgba(0, 0, 0, 0.3);
+            display: inline-block;
+            padding: 0.4rem 1.8rem;
+            border-radius: 60px;
+            backdrop-filter: blur(4px);
+            letter-spacing: 1px;
+        }
+
+        /* main content area */
+        .tips-content {
+            padding: 2.2rem 2rem 2.5rem;
+        }
+
+        .section-title {
+            font-size: 1.9rem;
+            font-weight: 700;
+            color: #f7c948;
+            border-left: 6px solid #f7c948;
+            padding-left: 1rem;
+            margin-bottom: 1.7rem;
+            text-shadow: 0 1px 2px black;
+        }
+
+        .tips-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .tip-card {
+            background: rgba(15, 25, 45, 0.7);
+            backdrop-filter: blur(4px);
+            border-radius: 2rem;
+            padding: 1.3rem 1.5rem;
+            transition: transform 0.25s ease, box-shadow 0.2s;
+            border: 1px solid rgba(247, 201, 72, 0.25);
+            box-shadow: 0 6px 14px rgba(0, 0, 0, 0.3);
+        }
+
+        .tip-card:hover {
+            transform: translateY(-8px);
+            border-color: #f7c948;
+            box-shadow: 0 18px 30px -8px rgba(0, 0, 0, 0.5);
+            background: rgba(30, 45, 70, 0.8);
+        }
+
+        .tip-icon {
+            font-size: 2.2rem;
+            display: inline-block;
+            margin-bottom: 0.6rem;
+        }
+
+        .tip-card h3 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #FFD966;
+            margin-bottom: 0.6rem;
+        }
+
+        .tip-card p {
+            color: #eef2ff;
+            line-height: 1.45;
+            font-size: 0.95rem;
+        }
+
+        .highlight {
+            background: linear-gradient(120deg, #f7c94830, #ffb34720);
+            padding: 1rem 1.5rem;
+            border-radius: 1.5rem;
+            margin-top: 1.5rem;
+            border-left: 3px solid #f7c948;
+        }
+
+        .highlight p {
+            color: #f1f5f9;
+            font-weight: 500;
+            font-size: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            flex-wrap: wrap;
+        }
+
+        .badge {
+            background: #f7c948;
+            color: #0f1722;
+            padding: 0.25rem 0.9rem;
+            border-radius: 40px;
+            font-weight: bold;
+            font-size: 0.8rem;
+        }
+
+        footer {
+            text-align: center;
+            padding: 1rem 1rem 1.5rem;
+            font-size: 0.8rem;
+            color: #94a3b8;
+            border-top: 1px dashed rgba(255, 255, 255, 0.15);
+            margin-top: 0.5rem;
+        }
+
+        /* decorative elements: floating stars */
+        .decoration-star {
+            position: fixed;
+            background: white;
+            width: 2px;
+            height: 2px;
+            border-radius: 50%;
+            opacity: 0.6;
+            pointer-events: none;
+            z-index: 999;
+            animation: starFloat 8s infinite linear;
+        }
+
+        @keyframes starFloat {
+            0% {
+                transform: translateY(100vh) rotate(0deg);
+                opacity: 0;
+            }
+            20% {
+                opacity: 0.8;
+            }
+            80% {
+                opacity: 0.8;
+            }
+            100% {
+                transform: translateY(-20vh) rotate(360deg);
+                opacity: 0;
+            }
+        }
+
+        /* responsiveness */
+        @media (max-width: 650px) {
+            .moving-word {
+                font-size: 2.5rem;
+                white-space: normal;
+                word-break: keep-all;
+            }
+            .tips-content {
+                padding: 1.5rem;
+            }
+            .section-title {
+                font-size: 1.5rem;
+            }
+            .moving-text-container {
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            .moving-word {
+                animation: floatMove 3s ease-in-out infinite;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="glass-card">
+    <!-- moving section with "Bexruzbek" -->
+    <div class="moving-header">
+        <div class="moving-text-container">
+            <span class="spark">✨</span>
+            <span class="moving-word">Bexruzbek</span>
+            <span class="spark">⚡</span>
+        </div>
+        <div class="sub-move">
+            <span>🔁 moving with confidence ▸</span>
+        </div>
+        <!-- decoration: tiny pulse line -->
+        <div style="margin-top: 0.8rem;">
+            <span style="display: inline-block; width: 60px; height: 2px; background: #f7c948; border-radius: 2px; animation: pulseWidth 2s infinite;"></span>
+        </div>
+    </div>
+
+    <div class="tips-content">
+        <div class="section-title">
+            🎙️ HOW TO GET AN 8 IN IELTS SPEAKING
+        </div>
+        <div class="tips-grid">
+            <!-- card 1 -->
+            <div class="tip-card">
+                <div class="tip-icon">🗣️</div>
+                <h3>Fluency & Coherence</h3>
+                <p>Speak without long pauses. Use discourse markers ("actually", "moreover", "to be honest"). Never memorise scripts – link ideas naturally.</p>
+            </div>
+            <!-- card 2 -->
+            <div class="tip-card">
+                <div class="tip-icon">📚</div>
+                <h3>Lexical Resource</h3>
+                <p>Show advanced vocabulary & paraphrasing. Avoid repetition – say "exhilarating" instead of "good". Use idiomatic language (spot on, a piece of cake).</p>
+            </div>
+            <!-- card 3 -->
+            <div class="tip-card">
+                <div class="tip-icon">🎯</div>
+                <h3>Grammar Range</h3>
+                <p>Use complex structures: conditionals, inversion, relative clauses. Mix tenses naturally. "Had I known, I would have acted differently."</p>
+            </div>
+            <!-- card 4 -->
+            <div class="tip-card">
+                <div class="tip-icon">🎧</div>
+                <h3>Pronunciation</h3>
+                <p>Master word stress & intonation. Record yourself. Use connected speech. Band 8 requires clarity AND natural rhythm — not a robotic accent.</p>
+            </div>
+        </div>
+
+        <!-- extra golden strategy section -->
+        <div class="highlight">
+            <p>
+                <span class="badge">🏆 BAND 8 FORMULA</span>
+                <span>✨ Expand each answer (20-30 sec minimum) + give examples + express opinions. Never answer "yes/no" without elaboration. Be confident and smile! ✨</span>
+            </p>
+            <p style="margin-top: 10px; font-size: 0.9rem;">
+                💡 <strong>Mock exam trick:</strong> simulate real conditions, use IELTS speaking topics (travel, education, technology). Get feedback from advanced speakers or AI.
+            </p>
+        </div>
+
+        <!-- quick checklist decoration -->
+        <div style="display: flex; flex-wrap: wrap; gap: 0.8rem; justify-content: center; margin-top: 1.8rem;">
+            <span style="background: #1e2f41; padding: 0.3rem 1rem; border-radius: 50px; font-size: 0.8rem;">✅ avoid cliches</span>
+            <span style="background: #1e2f41; padding: 0.3rem 1rem; border-radius: 50px; font-size: 0.8rem;">✅  paraphrase question</span>
+            <span style="background: #1e2f41; padding: 0.3rem 1rem; border-radius: 50px; font-size: 0.8rem;">✅  use idiomatic language</span>
+            <span style="background: #1e2f41; padding: 0.3rem 1rem; border-radius: 50px; font-size: 0.8rem;">✅  signposting</span>
+        </div>
+    </div>
+    <footer>
+        🌟 interactive moving header | IELTS 8+ speaking roadmap | designed for Bexruzbek 🌟
+    </footer>
+</div>
+
+<!-- tiny extra moving decoration + floating particles (decor on taste) -->
+<script>
+    (function addFloatingStars() {
+        // decorative stars that float upward - adds lively atmosphere
+        const starCount = 45;
+        for (let i = 0; i < starCount; i++) {
+            const star = document.createElement('div');
+            star.classList.add('decoration-star');
+            const size = Math.random() * 3 + 1;
+            star.style.width = `${size}px`;
+            star.style.height = `${size}px`;
+            star.style.left = `${Math.random() * 100}%`;
+            star.style.animationDuration = `${Math.random() * 6 + 5}s`;
+            star.style.animationDelay = `${Math.random() * 8}s`;
+            star.style.backgroundColor = `rgba(255, 215, 120, ${Math.random() * 0.6 + 0.2})`;
+            document.body.appendChild(star);
+        }
+    })();
+
+    // additional mouse following glow (optional simple decoration)
+    const bodyEl = document.body;
+    let glow = document.createElement('div');
+    glow.style.position = 'fixed';
+    glow.style.width = '180px';
+    glow.style.height = '180px';
+    glow.style.borderRadius = '50%';
+    glow.style.background = 'radial-gradient(circle, rgba(247,201,72,0.15), transparent 70%)';
+    glow.style.pointerEvents = 'none';
+    glow.style.zIndex = '9999';
+    glow.style.transition = 'transform 0.1s ease';
+    glow.style.top = '-100px';
+    glow.style.left = '-100px';
+    document.body.appendChild(glow);
+    
+    document.addEventListener('mousemove', (e) => {
+        glow.style.transform = `translate(${e.clientX - 90}px, ${e.clientY - 90}px)`;
+    });
+    
+    // small console greeting (just for fun)
+    console.log('✨ Bexruzbek | moving text active | IELTS band 8 strategies loaded ✨');
+</script>
+
+<!-- ensure moving text catches extra animation smoothness on all devices -->
+</body>
+</html>
